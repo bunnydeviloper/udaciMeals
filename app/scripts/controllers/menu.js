@@ -9,9 +9,8 @@
  */
 angular.module('udaciMealsApp')
   .controller('MenuCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+    this.id = 'berry-pudding';
+    this.name = 'Strawberry Pudding';
+    this.img = 'berrypudding.jpg';
+    this.rating = 5;
   });
