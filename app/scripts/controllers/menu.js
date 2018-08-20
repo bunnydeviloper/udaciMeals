@@ -11,6 +11,8 @@ angular.module('udaciMealsApp')
   .controller('MenuCtrl', ['foodFinder', function (menu) {
     var vm = this;
 
+    this.name = 'Udacity Cafeteria';
+
     menu.getMenu().then(function(data) {
       vm.items = data;
     });
