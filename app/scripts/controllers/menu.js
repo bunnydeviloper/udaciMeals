@@ -24,7 +24,7 @@ angular.module('udaciMealsApp')
     */
 
     this.chooseItem = function(menuCategory, menuItemName) {
-
+      orderManager.chooseMenuOption(menuCategory, menuItemName);
     };
 
     this.increment = function(item) {
