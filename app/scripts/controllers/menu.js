@@ -9,7 +9,7 @@
  */
 angular.module('udaciMealsApp')
   .controller('MenuCtrl', ['foodFinder', function (menu) {
-    var vm = this;
+    let vm = this;
 
     this.name = 'Udacity Cafeteria';
 
