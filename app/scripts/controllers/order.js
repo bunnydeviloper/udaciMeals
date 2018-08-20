@@ -10,5 +10,4 @@
 angular.module('udaciMealsApp')
   .controller('OrderCtrl', ['orderManagement', function (orderManager) {
     this.list = orderManager.getOrders();
-
   }]);
