@@ -8,13 +8,19 @@
  * Controller of the udaciMealsApp
  */
 angular.module('udaciMealsApp')
-  .controller('MenuCtrl', function () {
-    this.items = [
-      {
-        this.id = 'strawberry-pudding';
-        this.name = 'Strawberry Pudding';
-        this.img = 'strawberry-pudding.jpg';
-        this.rating = 5;
-      }
-    ];
-  });
+  .controller('MenuCtrl', ['foodFinder', function (menu) {
+    var vm = this;
+
+    menu.getMenu().then(function(data) {
+      vm.items = data;
+    });
+
+    this.increment = function(item) {
+      // item.rating += 0.1
+      item.rating = ((item.rating * 10) + 1) / 10;
+    };
+    this.decrement = function(item) {
+      // item.rating -= 0.1
+      item.rating = ((item.rating * 10) -1) /10;
+    };
+  }]);
