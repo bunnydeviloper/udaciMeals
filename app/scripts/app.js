@@ -1,4 +1,5 @@
 'use strict';
+
 /**
  * @ngdoc overview
  * @name udaciMealsApp
