@@ -9,13 +9,19 @@
  */
 angular.module('udaciMealsApp')
   .controller('MenuCtrl', ['foodFinder', 'orderManagement',  function(menu, orderManager) {
-    let vm = this;
+    let vm = this; // view model
 
     this.name = 'Udacity Cafeteria';
 
+    this.items = menu.getMenu();
+    console.log(this.items);
+
+    /*
     menu.getMenu().then(function(data) {
       vm.items = data;
     });
+    console.log(vm.items);
+    */
 
     this.chooseItem = function(menuCategory, menuItemName) {
 

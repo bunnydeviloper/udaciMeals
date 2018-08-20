@@ -1,10 +1,8 @@
 <div class="row">
+  <h1>{{menu.name}}</h1>
   <div class="items-container" ng-repeat="item in menu.items">
     <div class="col-md-4">
-      <img class="item__image" ng-src="images/{{item.img}}" alt="{{item.name}}">
-
-      <h1>Helllllooooo</h1>
-
+      <img width=200 height=130 class="item__image" ng-src="images/{{item.img}}" alt="{{item.name}}">
       <h4>{{item.name}}</h4>
       <p>
       Rating: {{item.rating}} <span ng-if="item.rating > 4.0" ng-class="">
