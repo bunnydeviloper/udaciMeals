@@ -8,10 +8,7 @@
  * Controller of the udaciMealsApp
  */
 angular.module('udaciMealsApp')
-  .controller('OrderCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+  .controller('OrderCtrl', ['orderManagement', function (orderManager) {
+    this.list = orderManager.getOrders();
+
+  }]);
