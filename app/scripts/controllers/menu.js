@@ -8,7 +8,7 @@
  * Controller of the udaciMealsApp
  */
 angular.module('udaciMealsApp')
-  .controller('MenuCtrl', ['foodFinder', function (menu) {
+  .controller('MenuCtrl', ['foodFinder', 'orderManagement',  function(menu, orderManager) {
     let vm = this;
 
     this.name = 'Udacity Cafeteria';
@@ -16,6 +16,10 @@ angular.module('udaciMealsApp')
     menu.getMenu().then(function(data) {
       vm.items = data;
     });
+
+    this.chooseItem = function(menuCategory, menuItemName) {
+
+    };
 
     this.increment = function(item) {
       // item.rating += 0.1
