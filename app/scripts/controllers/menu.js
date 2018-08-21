@@ -14,13 +14,11 @@ angular.module('udaciMealsApp')
     this.name = 'Udacity Cafeteria';
 
     this.items = menu.getMenu();
-    console.log(this.items);
 
     /*
     menu.getMenu().then(function(data) {
       vm.items = data;
     });
-    console.log(vm.items);
     */
 
     this.chooseItem = function(menuCategory, menuItemName) {
@@ -35,4 +33,5 @@ angular.module('udaciMealsApp')
       // item.rating -= 0.1
       item.rating = ((item.rating * 10) -1) /10;
     };
+
   }]);

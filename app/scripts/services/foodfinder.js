@@ -10,6 +10,8 @@
 angular.module('udaciMealsApp')
   .service('foodFinder', function () {
     // AngularJS will instantiate a singleton by calling "new" on this function
+    /*
+    */
     var menu = [
       {
         "id": "chicken-salad",
